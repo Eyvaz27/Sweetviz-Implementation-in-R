@@ -1,0 +1,18 @@
+Package: sweetviz
+Type: Package
+Title: R Implementation of  an open-source 
+    Python library that generates beautiful, 
+    high-density visualizations to kickstart 
+    EDA (Exploratory Data Analysis) with just 
+    two lines of code
+Version: 0.1.0
+Author: Eyvaz Najafli
+Maintainer: Eyvaz Najafli <eyvaz.necefli.std@bhos.edu.az>
+Description: The system is built around quickly visualizing 
+    target values and comparing datasets. Its goal is to help 
+    quick analysis of target characteristics, training vs testing 
+    data, and other such data characterization tasks
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1

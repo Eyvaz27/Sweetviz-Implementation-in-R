@@ -1,0 +1,23 @@
+library(reticulate)
+library(datasets)
+library(dplyr)
+# py_install("sweetviz")
+
+repl_python()
+
+# import numpy as np
+np <- import('numpy')
+# import matplotlib.pyplot as plt
+plt <- import('matplotlib.pyplot')
+# importing sweetviz
+sv <- import('sweetviz')
+#importing the dataset
+data(iris)
+#generating the report with sweetviz
+report <- sv$analyze(iris)
+report$show_html('IRIS_raw.html')
+#generating comperative report with sweetviz
+compr <- sv$compare(iris %>% subset(Species=="setosa") %>% select(-Species),
+                    iris %>% subset(Species=="versicolor") %>% select(-Species))
+compr$show_html('SETOSA--VERSICOLOR.html')
+
